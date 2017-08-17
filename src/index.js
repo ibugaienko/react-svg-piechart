@@ -37,6 +37,7 @@ class PieChart extends Component {
       data.map((d, i) => {
         const expandVal = expandOnHover && expandedSector === i ? expandPx : 0
         const angle = 360 * d.value / total
+        console.log(`angle : ${JSON.stringify(angle)}`);
         const largeArc = (d.value / total) <= 0.5 ? 0 : 1
 
         startAngle = endAngle
